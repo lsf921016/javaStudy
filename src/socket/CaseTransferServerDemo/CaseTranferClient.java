@@ -21,9 +21,6 @@ public class CaseTranferClient {
         //socket输出流
         PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
 
-        //socket输入流，读取服务端返回的大写数据
-        BufferedReader bufIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
         String line = null;
         while ((line = bufr.readLine()) != null) {
 
@@ -32,6 +29,8 @@ public class CaseTranferClient {
             }
             printWriter.println(line);
 
+            //socket输入流，读取服务端返回的大写数据
+            BufferedReader bufIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //读取服务端发回的一行大写数据
             String UpperStr = bufIn.readLine();
             System.out.println(UpperStr);
