@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6a67c5f-c2a8-4f04-82f0-36031de893d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/javaIO/PrintStream.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javaStudy/File/test.class" afterPath="$PROJECT_DIR$/out/production/javaStudy/File/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javaStudy/test.class" afterPath="$PROJECT_DIR$/out/production/javaStudy/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javaStudy/javaIO/aFile" afterPath="$PROJECT_DIR$/out/production/javaStudy/javaIO/aFile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javaStudy/socket/aCopy.txt" afterPath="$PROJECT_DIR$/out/production/javaStudy/socket/aCopy.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javaIO/aFile" afterPath="$PROJECT_DIR$/src/javaIO/aFile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/socket/aCopy.txt" afterPath="$PROJECT_DIR$/src/socket/aCopy.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.java" afterPath="$PROJECT_DIR$/src/test.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaIO/PrintStream.java" afterPath="$PROJECT_DIR$/src/javaIO/PrintStreamDemo.java" />
-    </list>
+    <list default="true" id="b6a67c5f-c2a8-4f04-82f0-36031de893d9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -766,12 +755,12 @@
       <workItem from="1489261723813" duration="20220000" />
       <workItem from="1489340685774" duration="10977000" />
       <workItem from="1489463908457" duration="6537000" />
-      <workItem from="1489541812622" duration="3865000" />
+      <workItem from="1489541812622" duration="3908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72404000" />
+    <option name="totallyTimeSpent" value="72447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,7 +772,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1924" height="1084" extended-state="1" />
+    <frame x="-9" y="-9" width="1924" height="1084" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
