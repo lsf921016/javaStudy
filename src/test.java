@@ -6,16 +6,8 @@ import java.util.Arrays;
  */
 public class test {
     public static void main(String[] args) throws IOException {
-        FileInputStream fis=new FileInputStream("E:\\javaStudy\\src\\File\\a.txt");
-        FileOutputStream fos=new FileOutputStream("E:\\javaStudy\\src\\socket\\aCopy.txt");
-
-        byte[] buf=new byte[1024];
-        int len=0;
-        while ((len=fis.read(buf))!=-1){
-            fos.write(buf,0,len);
-            fos.flush();
-        }
-        fis.close();
-        fos.close();
+        PrintWriter pw=new PrintWriter(new FileWriter("E:\\javaStudy\\src\\socket\\aCopy.txt"),true);
+        pw.println("ttttttttttttt eeeeeeeeee ssssssss tttttttttt");
+        pw.close();
     }
 }
