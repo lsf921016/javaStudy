@@ -9,7 +9,14 @@ import java.util.RandomAccess;
  */
 public class test {
     public static void main(String[] args) throws IOException {
-
-        System.out.println((int)'a');
+        BufferedReader bufr=new BufferedReader(new FileReader("E:\\javaStudy\\src\\test\\outputFile.txt"));
+        String line=null;
+        int count=0;
+        int n;
+        while ((line=bufr.readLine())!=null){
+           if (( line.lastIndexOf(",")!=-1))
+               count++;
+        }
+        System.out.println(count);
     }
 }

@@ -2,7 +2,6 @@ package test;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,7 +13,7 @@ import java.util.List;
 
 public class ProgramTest {
     static final int maxSize = 500000;//内存每次最多放500000条记录
-    static final char[] maxKey = {255, 255, 255, 255, 255, 255, 255, 255};
+    static final char[] maxKey = {255, 255, 255, 255, 255, 255, 255, 255, ','};
 
     /**
      * 请在此方法内完成代码，但可以增加自己的私有方法。
@@ -55,14 +54,16 @@ public class ProgramTest {
         }
         while (i == maxSize) {
             heapSize = maxSize;
-            File newTempFile = File.createTempFile("tempFile.txt", ".txt", tempFile.getParentFile());
+            File newTempFile = File.createTempFile("tempFile", ".txt", tempFile);
             tempFiles.add(newTempFile);
             BufferedWriter bufw = new BufferedWriter(new FileWriter(newTempFile));
             buildHeap(heapArray, heapSize, 0);
-            while (heapSize != 0 && line != null) {
+            while (heapSize != 0) {
                 bufw.write(heapArray[0]);
                 bufw.newLine();
                 line = bufr.readLine();
+                if (line == null)
+                    break;
                 if (keyOf(line).compareTo(keyOf(heapArray[0])) > 0) {
                     heapArray[0] = line;
                 } else {
@@ -76,6 +77,7 @@ public class ProgramTest {
                 i = i - heapSize;
                 while (heapSize != 0) {
                     bufw.write(heapArray[0]);
+                    bufw.newLine();
                     heapArray[0] = heapArray[heapSize - 1];
                     heapSize--;
                     siftDown(heapArray, 0, heapSize);
@@ -83,6 +85,7 @@ public class ProgramTest {
             }
             bufw.close();
         }
+        //continue to read the rest data in buffer
         if (i != 0) {
             heapSize = i;
             File newTempFile = File.createTempFile("tempFile.txt", ".txt", tempFile.getParentFile());
@@ -159,6 +162,7 @@ public class ProgramTest {
             runs[i].length = j;
             runs[i].index = 0;
         }
+        //merge the files and write to outputFile
         int[] ls = new int[ways];//loser tree
         createLoserTree(ls, runs, ways);
         BufferedWriter bufw = new BufferedWriter(new FileWriter(outputFile));
@@ -170,7 +174,7 @@ public class ProgramTest {
                 //reload
                 int j = 0;
                 while ((runs[ls[0]].buffer[j] = rList.get(ls[0]).readLine()) != null) {
-                    ++j;
+                    j++;
                     if (j == length_per_run) {
                         break;
                     }
@@ -180,7 +184,9 @@ public class ProgramTest {
             }
             if (runs[ls[0]].length == 0) {
                 liveRuns--;
-                runs[ls[0]].buffer[runs[ls[0]].index] = new String(maxKey);
+                String maxString = new String(maxKey);
+                maxString += "\n";
+                runs[ls[0]].buffer[runs[ls[0]].index] = maxString;
             }
             adjust(ls, runs, ways, ls[0]);
         }
@@ -207,7 +213,7 @@ public class ProgramTest {
     private static void adjust(int[] ls, Run[] runs, int n, int s) {
         int t = (s + n) / 2;
         int temp = 0;
-        while (t > 0) {
+        while (t != 0) {
             if (s == -1)
                 break;
             if (ls[t] == -1 || (keyOf(runs[s].buffer[runs[s].index]).compareTo(keyOf(runs[ls[t]].buffer[runs[ls[t]].index]))) > 0) {
@@ -226,14 +232,6 @@ public class ProgramTest {
         return str.substring(0, str.indexOf(","));
     }
 
-    static int sumOf(int[] a) {
-        int sum = 0;
-        int n = a.length;
-        for (int i = 0; i < n; i++) {
-            sum += a[i];
-        }
-        return sum;
-    }
 
     static class Run {
         String[] buffer;

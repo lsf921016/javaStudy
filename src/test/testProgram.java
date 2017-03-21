@@ -12,7 +12,9 @@ public class testProgram {
         long start=System.currentTimeMillis();
         File inputFile=new File("E:\\javaStudy\\src\\test\\inputFile.txt");
         File outputFile=new File("E:\\javaStudy\\src\\test\\outputFile.txt");
-        File tempFile=new File("E:\\javaStudy\\src\\test\\tempFile.txt");
+        File tempFile=new File("E:\\javaStudy\\src\\test\\tempFile");
+        if (outputFile.exists())
+            outputFile.delete();
         ProgramTest.test(inputFile,outputFile,tempFile);
         long end=System.currentTimeMillis();
         System.out.println(end-start);
