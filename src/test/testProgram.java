@@ -10,9 +10,9 @@ import java.io.File;
 public class testProgram {
     public static void main(String[] args) throws Exception {
         long start=System.currentTimeMillis();
-        File inputFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\input.data");
-        File outputFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\outputFile");
-        File tempFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\temp");
+        File inputFile=new File("E:\\javaStudy\\src\\test\\inputFile.txt");
+        File outputFile=new File("E:\\javaStudy\\src\\test\\outputFile.txt");
+        File tempFile=new File("E:\\javaStudy\\src\\test\\tempFile.txt");
         ProgramTest.test(inputFile,outputFile,tempFile);
         long end=System.currentTimeMillis();
         System.out.println(end-start);

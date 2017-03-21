@@ -9,7 +9,7 @@ public class main {
     public static void main(String[] args) throws Exception {
         long start=System.currentTimeMillis();
         File inputFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\input.data");
-        File outputFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\outputFile");
+        File outputFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\outputFile.txt");
         File tempFile=new File("E:\\javaStudy\\src\\Algorithm\\javatest\\data\\temp");
         ProgramTest3.test(inputFile,outputFile,tempFile);
         long end=System.currentTimeMillis();

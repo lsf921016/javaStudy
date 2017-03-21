@@ -54,7 +54,7 @@ public class ProgramTest2 {
 		int right = length - 1;
 		mergeSort(arr, tempArr,left,right);
 
-		//write the sorted list into outputFile
+		//write the sorted list into outputFile.txt
 		BufferedWriter bufw = new BufferedWriter(new FileWriter(outputFile));
 		for (int i = 0; i <length ; i++) {
 			bufw.write(arr[i]);

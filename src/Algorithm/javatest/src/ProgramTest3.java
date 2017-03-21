@@ -52,7 +52,7 @@ public class ProgramTest3 {
         int right = length - 1;
         qSort(list, left, right);
 
-        //write the sorted list into outputFile
+        //write the sorted list into outputFile.txt
         BufferedWriter bufw = new BufferedWriter(new FileWriter(outputFile));
         for (String str : list) {
             bufw.write(str);
