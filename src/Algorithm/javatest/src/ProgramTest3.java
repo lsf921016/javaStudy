@@ -8,7 +8,7 @@ import java.util.List;
  * Notice:
  * <BR> 1. 仅限使用以下package:
  * java.lang.*, java.io.*, java.math.*, java.text.*, java.util.*
- * <BR> 2. 请勿变更 package名，类名，test()定义。
+ * <BR> 2. 请勿变更 package名，类名，outterSort()定义。
  */
 public class ProgramTest3 {
 

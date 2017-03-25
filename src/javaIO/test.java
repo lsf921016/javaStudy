@@ -9,7 +9,7 @@ import java.util.RandomAccess;
  */
 public class test {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufr=new BufferedReader(new FileReader("E:\\javaStudy\\src\\test\\outputFile.txt"));
+        BufferedReader bufr=new BufferedReader(new FileReader("E:\\javaStudy\\src\\outterSort\\outputFile.txt"));
         String line=null;
         int count=0;
         int n;
