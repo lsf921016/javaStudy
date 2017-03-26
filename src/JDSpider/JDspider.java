@@ -18,8 +18,8 @@ public class JDspider {
     Set<String> allUrlset=new HashSet<>();
     ArrayList<String> notVisited=new ArrayList<>();
     HashMap<String,Integer> depths=new HashMap<>();
-    int maxDepth=10;
-    int maxthread=10;
+    int maxDepth=3;
+    int maxthread=5;
     int waitNum=0;
     public static final Object signal=new Object();
 
@@ -55,7 +55,7 @@ public class JDspider {
         try {
             Document doc= Jsoup.connect(url).get();
             int depth=depths.get(url);
-            System.out.println("爬取网页：成功"+url);
+            System.out.println("开始爬取网页："+url);
             System.out.println("深度："+depth);
             System.out.println("执行线程："+Thread.currentThread().getName());
             System.out.println("------------------------------");
@@ -69,24 +69,26 @@ public class JDspider {
     }
 
     private void parseContent(Document doc, int depth,String url) {
-        //找到content中所有商品页，并加入set，
-        Elements elements=doc.select("a[href=item.jd.com/.+?]");
-        for (Element link:elements){
-            String str=link.attr("abs:href");
-            if (!allUrlset.contains(str)){
-                allUrlset.add(str);
-            }
-        }
-
         //判断是否是商品页，是则构建bean，不是
-        String content=doc.toString();
         Pattern pattern=Pattern.compile(".*?item.jd.com/(.+?).html");
-        Matcher matcher=pattern.matcher(content);
+        Matcher matcher=pattern.matcher(url);
         String number;
         if (matcher.find()&&(number=matcher.group(1))!=null){
+            System.out.println("开始解析编号为"+number+"的商品");
             JDBean jc=new JDBean(doc,url,number);
             System.out.println(jc);
         }
+
+        //找到content中所有商品页，并加入set，
+        Elements elements=doc.select("a[href~=item.jd.com/.+?]");
+        for (Element link:elements){
+            String str=link.attr("abs:href");
+            if (!allUrlset.contains(str)){
+                addUrl(str,depth);
+            }
+        }
+
+
 
     }
 

@@ -12,6 +12,14 @@ public class Test {
         System.out.println("开始爬。。。。。。。");
         js.begin();
 
-
+        while(true){
+            if(js.notVisited.isEmpty()&& Thread.activeCount() == 1||js.waitNum==js.maxthread){
+                long end = System.currentTimeMillis();
+                System.out.println("总共爬了"+js.allUrlset.size()+"个网页");
+                System.out.println("总共耗时"+(end-start)/1000+"秒");
+                System.exit(1);
+//                break;
+            }
+        }
     }
 }
