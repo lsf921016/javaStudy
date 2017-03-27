@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class generateData {
     public static void main(String[] args) throws IOException {
-        final int MAX=80;
+        final int MAX=80000000;
         File f=new File("E:\\javaStudy\\src\\outterSort\\myInputFile.txt");
         if (f.exists())
             f.delete();

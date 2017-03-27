@@ -24,9 +24,10 @@ public class test {
 //        System.out.println(jsonObject.get("commentCount"));
 //        System.out.println(jsonObject.get("goodRate"));
 //        System.out.println(jsonObject);
-        String url = "http://item.jd.com/3183065.html";
-        Document doc=Jsoup.connect(url).get();
-        Elements es=doc.select("ul#parameter2 li");
-        System.out.println(es.text());
+//        String url = "http://item.jd.com/3183065.html";
+//        Document doc=Jsoup.connect(url).get();
+//        Elements es=doc.select("ul#parameter2 li");
+//        System.out.println(es.text());
+        System.out.println();
     }
 }
