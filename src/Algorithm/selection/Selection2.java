@@ -1,10 +1,8 @@
 package Algorithm.selection;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
-import test1.QuickSort;
 
 public class Selection2 {
 	int comparison=0;
