@@ -3,7 +3,7 @@ package JDSpider;
 /**
  * Created by lenovo on 2017/3/24.
  */
-public class Test {
+public class B {
     public static void main(String[] args) {
         String homePage="http://www.jd.com/";
         final JDspider js=new JDspider();

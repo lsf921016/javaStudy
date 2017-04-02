@@ -80,7 +80,6 @@ public class JDBean {
         String commentUrl = "http://club.jd.com/productpage/p-" + number + "-s-0-t-3-p-0.html";
         setComment(commentUrl);
         System.out.println();
-
     }
 
     private void setComment(String commentUrl) {
