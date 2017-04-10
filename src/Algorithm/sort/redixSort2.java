@@ -25,6 +25,7 @@ public class redixSort2 {
         }
 
         generateData(inputFile);//call static method to generate data and write into inputFile
+        System.out.println("inputFile and data has been created,the location is:   "+inputFile.getAbsolutePath());
         BufferedReader bufr=new BufferedReader(new FileReader(inputFile));
         PrintWriter pw=new PrintWriter(outputFile);
 
@@ -40,6 +41,7 @@ public class redixSort2 {
         }
         pw.flush();
         pw.close();
+        System.out.println("outpurFile has been created,the location is:   "+outputFile.getAbsolutePath());
     }
 
     private static void redixSort(ArrayList<String> list) {
@@ -64,9 +66,6 @@ public class redixSort2 {
                 list.set(--count[tempList.get(i).charAt(index)-'A'],tempList.get(i));
             }
         }
-    }
-    public static void writeToFile(ArrayList<String> list,File f){
-
     }
     public static void generateData(File f) throws FileNotFoundException {
         if (f.exists())
