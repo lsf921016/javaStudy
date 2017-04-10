@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validting a form field </title>
+<script language="JavaScript">
+    function rank () {
+        document.write("n1:"+document.forms[0].n1.value+document.forms[0].n2.value+document.forms[0].n3.value);
+    }
+</script>
+</head>
+<body>
+<form>
+    enter any three numbers:
+    <input type="text" name="n1">
+    <input type="text" name="n2">
+    <input type="text" name="n3">
+    <input type="button" name="submit" value="Rank the numbers" onclick="rank()">
+</form>
+</body>
+</html>

@@ -60,17 +60,6 @@ public class Selection2 {
 		}
 
 	}
-	private void insertionSort(int[] arr, int left, int right) {
-		int temp;
-		for (int i = 1 + left; i <= right; ++i) {
-			temp = arr[i];
-			int j = i - 1;
-			for (; j >= 0 && compare(temp, arr[j]); j--) {
-				arr[j + 1] = arr[j];
-			}
-			arr[j + 1] = temp;
-		}
-	}
 
 	private void insertionSort(int [] arr) {
 		int temp;
