@@ -10,9 +10,9 @@ public class redixSort2 {
     public static void main(String args[]) throws IOException {
         System.out.println("Please specify the input file (default = f.txt ):");
         Scanner sc1=new Scanner(System.in);
-        while (!sc1.hasNext()){
-
-        }
+//        while (!sc1.hasNext()){
+//
+//        }
         System.out.println("Please specify the output file (default = g.txt):");
         Scanner sc2=new Scanner(System.in);
 
