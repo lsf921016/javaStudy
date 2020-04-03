@@ -74,7 +74,7 @@ public class Sort {
     private static int partition(int[] arr, int left, int right) {
         int pivot = arr[right];
         int l = left;
-        int r = right;
+        int r = right-1;
         while (l <= r) {
             while (l <= r && arr[l] <= pivot) {
                 ++l;
